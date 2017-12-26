@@ -140,15 +140,29 @@
   - An action is just an object that flows through all of our different reducers.
   - Reducers can then use that action to produce a different value(state) for tis particular piece of state.
 
-## `Middleware`
+## `Middleware` in `Redux`
 - `Middlewares` are functions that take an action.
 - Depending on the action type, the action's payload or any number of factors, the `middleware` can choose to let the action pass through, can manipulate the action, can stop the action, ect... **before** actions reach reducers.
 - Like gatekeepers of reducers
 - `Middleware` allows use to do many things by intercepting actions.
 - We want to make all the actions we create flow through `middleware` steps and the `middleware` can modify actions.
 - We can have many different steps of `middlewares` in our application, so we can have 0 to many `middlewares`.
-    - These `middlewares` are just functions where actions pass through them before hitting reducers.
+  - These `middlewares` are just functions where actions pass through them before hitting reducers.
+- Summary:
+  - `Middleware` has the ability to block, modify, or let pass through actions **after** actions are created **before** hit reducers.
 
-## Promise
+## [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
+- **A `Promise` is a proxy for a value not necessarily known when the `promise` is created.** 
+  - It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. 
+  - This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a `promise` to supply the value at some point in the future.
+- A Promise is in one of these states:
+    1. pending: initial state, neither fulfilled nor rejected.
+    2. fulfilled: meaning that the operation completed successfully.
+    3. rejected: meaning that the operation failed.
+  - A pending promise can either be fulfilled with a value, or rejected with a reason (error). 
+    - When either of these options happens, the associated handlers queued up by a promise's then method are called. (If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.)
+  - As the `Promise.prototype.then()` and `Promise.prototype.catch()` methods return promises, they can be chained.
+
 
 ## Axios has a solo purpose which is making AJAX request.
