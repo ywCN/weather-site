@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 export default class WeatherList extends Component {
     render() {
         return (
-            <table className="table table-hover"
-            // thead is table head
+            <table className="table table-hover">
+            {/* thead is table head */}
                 <thead>
                     <tr>
                         <th>City</th>
