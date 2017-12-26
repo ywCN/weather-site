@@ -164,7 +164,7 @@
     - When either of these options happens, the associated handlers queued up by a promise's then method are called. (If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.)
   - As the `Promise.prototype.then()` and `Promise.prototype.catch()` methods return promises, they can be chained.
 
-## `Redux Promise`
+## `Redux Promise Middleware`
 - `Redux Promise` is a middleware. Middleware has the ability to stop or manipulate actions.
 - Redux will check the payload property. 
   - If it is a promise, it will stop the action.
