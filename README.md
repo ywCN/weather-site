@@ -78,6 +78,8 @@
 - All reducers have **2** arguments.
   1. The current state
   2. The action
+- Reducer does not mutate state. It creates new state.
+  - no method like push() or state.oxx= ooxx will be used in reducer
 
 ## `combineReducers` function
 - `import { combineReducers } from 'redux';`
