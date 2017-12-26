@@ -121,7 +121,7 @@
   - `type`: describes the purpose of the action
   - `payload`: describe or clarifies the conditions of the action that is being triggered.
 
-## What happens after user clicks a button in Redux context
+## Flows of Stuffs in Redux
   1. user triggers an event, for example, click a button
   2. event listener will call an `action creator`
   3. `action creator` is a function that returns an object called `action`
@@ -141,6 +141,7 @@
   - An action creator is just a function that returns an action.
   - An action is just an object that flows through all of our different reducers.
   - Reducers can then use that action to produce a different value(state) for tis particular piece of state.
+- ![alt text](https://github.com/ywCN/weather-site/blob/master/diagram.png "Flow Diagram")
 
 ## `Middleware` in `Redux`
 - `Middlewares` are functions that take an action.
