@@ -185,10 +185,7 @@
         - because whenever we are passing in a function that is supposed to map or dispatch the props of our container, it always goes in the **second** argument.
         - by passing `null` as the first argument, we tells Redux that we do not need Redux to maintain the state of this container, we do not need any state in this container
       - if we also need state, we need to also create `mapStateToProps` function, and pass it as the first argument in connect()
-
 5. Remove `export default` before the class
-
-
 - Note: This setup is always repeated and almost always identicial to this process.
 - Note: Delete original `export default` before the component/container class.
 
