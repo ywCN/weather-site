@@ -16,7 +16,6 @@ export default class SearchBar extends Component {
 
     render() {
         return (
-            // styles are from bootstrap
             <form className="input-group">
                 <input 
                     placeholder="Get a 5 day forcast in your favorite city"
