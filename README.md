@@ -169,6 +169,7 @@
 - Redux will check the payload property. 
   - If it is a promise, it will stop the action.
   - And then once the request finishes, it dispatches a new action of the same type but with a payload of the **resolved** request.
+- `Redux Promise Middleware` helps us to pre-process async action, so we do not need to work with Promise. Instead, we just work with data returned by async request.
 
 
 ## Container Setup Process
