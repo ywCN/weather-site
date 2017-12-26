@@ -96,7 +96,7 @@
 - a `container` can inject state of `component` into application state with the help of `React-Redux` library
   - `React-Redux` is a bridge between `React` and `Redux`
 - a `component` can be defined as a `container` instead of a `component`
-  - a `component` can also be call a `view`
+  - a `component` can also be called as `view`
   - this `component` is promoted as a `container`
 - Only the most parent component that uses a particular piece of state needs to be connected to redux. like LCA.
 - **Whenever state changes, the container/component will automatically re-rendered.**
@@ -111,13 +111,13 @@
   1. user triggers an event, for example, click a button
   2. event listener will call an `action creator`
   3. `action creator` is a function that returns an object called `action`
-    - the object has a type that describes the type of `action` that was just triggered
-    - the object can also have some data that can further describes the `action`
-    - `action creator` function must wire up to redux to make sure it will send `action` to `reducers`
+      - the object has a type that describes the type of `action` that was just triggered
+      - the object can also have some data that can further describes the `action`
+      - `action creator` function must wire up to redux to make sure it will send `action` to `reducers`
   4. this object is sent to all `reducers` automatically
   5. `reducers` will choose the corresponding `reducer` depends on the type in the object and return corresponding `state`
-    - switch statement will determine the type of action
-    - `reducders` do not have to respond an action, which is done by using the `default` in switch statement and returns the original `state`
+      - switch statement will determine the type of action
+      - `reducders` do not have to respond an action, which is done by using the `default` in switch statement and returns the original `state`
   6. this `state` will be assigned to the corresponding piece of the **newly assembled application state**
   7. since the state is changed, the corresponding components/views will be re-rendered automatically
   8. finished re-rendering, the application will wait for user to trigger another event
