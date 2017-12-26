@@ -127,6 +127,7 @@
       - the object can also have some data that can further describes the `action`
       - `action creator` function must wire up to redux to make sure it will send `action` to `reducers`
   4. this object is sent to all `reducers` automatically
+      - **before reaching reducers, actions normally will be processed by middlewares**
   5. `reducers` will choose the corresponding `reducer` depends on the type in the object and return corresponding `state`
       - switch statement will determine the type of action
       - `reducders` do not have to respond an action, which is done by using the `default` in switch statement and returns the original `state`
@@ -138,3 +139,12 @@
   - An action creator is just a function that returns an action.
   - An action is just an object that flows through all of our different reducers.
   - Reducers can then use that action to produce a different value(state) for tis particular piece of state.
+
+## `Middleware`
+- `Middlewares` are functions that take an action.
+- Depending on the action type, the action's payload or any number of factors, the `middleware` can choose to let the action pass through, can manipulate the action, can stop the action, ect... **before** actions reach reducers.
+- Like gatekeepers of reducers
+- `Middleware` allows use to do many things by intercepting actions.
+- We want to make all the actions we create flow through `middleware` steps and the `middleware` can modify actions.
+- We can have many different steps of `middlewares` in our application, so we can have 0 to many `middlewares`.
+    - These middlewares are just functions where actions pass through them before hitting reducers.
