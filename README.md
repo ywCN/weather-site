@@ -147,4 +147,4 @@
 - `Middleware` allows use to do many things by intercepting actions.
 - We want to make all the actions we create flow through `middleware` steps and the `middleware` can modify actions.
 - We can have many different steps of `middlewares` in our application, so we can have 0 to many `middlewares`.
-    - These middlewares are just functions where actions pass through them before hitting reducers.
+    - These `middlewares` are just functions where actions pass through them before hitting reducers.
