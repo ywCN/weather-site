@@ -14,6 +14,10 @@
 - Whenever need to reference a javascript variable in JSX, {} is required.
   - for example: `<VideoList videos={this.state.videos}/>`
 
+## React Event Handler
+- onChange, onCLick, onOOXX
+  - these handlers all have an `event` object
+
 ## Components
 - functional component: is a function produce JSX
 - class component: can aware itself when it is renderred
@@ -50,7 +54,7 @@
 
 ## Downward Dataflow of React: Only the most parent component is responsible for fetching data. Like the LCA.
 
-## Reducer:
+## Reducer
 - Reducer is a function that returns a piece of the `application state`.
 - Since an application can have different piece of states in the `application state`, we can have different reducers.
   - `application state` is a plain JavaScript Object.
