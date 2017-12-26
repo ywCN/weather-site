@@ -199,5 +199,8 @@
 - Note: This setup is always repeated and almost always identicial to this process.
 - Note: Delete original `export default` before the component/container class.
 
+## import
+- sometimes need to use {}, sometimes not
+  - TODO: find out when should use {}, when should not
 
-## Axios has a solo purpose which is making AJAX request.
+## Axios has a sole purpose which is making AJAX request.
