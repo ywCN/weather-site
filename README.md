@@ -52,6 +52,12 @@
 ## In React, when user types, the state changes FIRST, THEN the view will change according to current state. 
 - During this process, no instance of class (objects) are created, so the conctructor will be executed upon creation of object.
 
+## In React, when a callback is passed into JSX and the callback uses `this`. The context needs to be bound.
+1. use arrow function will work
+    - `{event => this.onOOXX(event)}`
+2. bind in constructor
+    - `this.onOOXX = this.onOOXX.bind(this);`
+
 ## Downward Dataflow of React: Only the most parent component is responsible for fetching data. Like the LCA.
 
 ## Reducer
