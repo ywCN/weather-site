@@ -150,3 +150,5 @@
     - These `middlewares` are just functions where actions pass through them before hitting reducers.
 
 ## Promise
+
+## Axios has a solo purpose which is making AJAX request.
