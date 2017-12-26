@@ -8,6 +8,7 @@ export default class SearchBar extends Component {
 
     onInputChange(event) {
         console.log(event.target.value); // event.target.value is from JavaScript
+        this.setState({ term: event.target.value });
     }
 
     render() {
