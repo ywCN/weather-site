@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchWeather } from '../actions/index';
 
-export default class SearchBar extends Component {
+class SearchBar extends Component {
     constructor(props) {
         super(props);
         this.state = { term: '' };
@@ -41,3 +41,11 @@ export default class SearchBar extends Component {
         );
     }
 }
+
+// This method make sure that actions created by action creators
+// flow down into middleware and then into reducers inside Redux.
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ fetchWeather }, dispatch);
+}
+
+export default connect(null, mapDispatchToProps)(SearchBar);

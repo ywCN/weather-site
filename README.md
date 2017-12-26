@@ -171,7 +171,22 @@
     - `import { bindActionCreators } from 'redux';`
     - `import { actionCreator } from '../actions/index';`
       - `actionCreator` is the exported function name in index.js
-3. 
+3. Remove `export default` before the class
+4. create `mapDispatchToProps` function
+    ```
+    - function mapDispatchToProps(dispatch) {
+    -     return bindActionCreators({ actionCreator }, dispatch);
+    - }
+    ```
+      - `actionCreator` is imported at top of this container/component file. **Step 2.**
+5. At bottom of this file
+    - `export default connect(null, mapDispatchToProps)(containerName);`
+      - `containerName` is the class 
+      - null is for
+
+
+
+
 
 - Note: This setup is always repeated and almost always identicial to this process.
 - Note: Delete original `export default` before the component/container class.
