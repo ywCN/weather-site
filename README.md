@@ -164,5 +164,17 @@
     - When either of these options happens, the associated handlers queued up by a promise's then method are called. (If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.)
   - As the `Promise.prototype.then()` and `Promise.prototype.catch()` methods return promises, they can be chained.
 
+## Container Setup Process
+1. In a **finished** component.
+2. At top, import 3 more things
+    - `import { connect } from 'react-redux';`
+    - `import { bindActionCreators } from 'redux';`
+    - `import { actionCreator } from '../actions/index';`
+      - `actionCreator` is the exported function name in index.js
+3. 
+
+- Note: This setup is always repeated and almost always identicial to this process.
+- Note: Delete original `export default` before the component/container class.
+
 
 ## Axios has a solo purpose which is making AJAX request.
