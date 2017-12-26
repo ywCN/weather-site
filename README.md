@@ -16,7 +16,7 @@
 
 ## React Event Handler
 - onChange, onCLick, onOOXX
-  - these handlers all have an `event` object
+  - these handlers all have an `event` object from JavaScript
 
 ## Components
 - functional component: is a function produce JSX
