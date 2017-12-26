@@ -19,6 +19,8 @@ class SearchBar extends Component {
 
     onFormSubmit(event) {
         event.preventDefault();// tells browser no to submit form; to avoid refreshing page
+        this.props.fetchWeather(this.state.term); //search the term by invoking action creator
+        this.setState({ term: '' }); //reset term after search
     }
 
     render() {
