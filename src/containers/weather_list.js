@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class WeatherList extends Component {
+class WeatherList extends Component {
     render() {
         return (
             <table className="table table-hover">
@@ -14,9 +15,23 @@ export default class WeatherList extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                 </tbody>
             </table>
         );
     }
 }
+
+// inject weather into this as props, 
+// so can access it by using this.props.weather
+// function mapStateToProps(state) {
+//     return { weather: state.weather };
+// }
+
+// ES6 version of same function
+function mapStateToProps({ weather }) {
+    // return { weather: weather };
+    return { weather }; // ES6, since key value are same
+}
+
+export default connect(mapStateToProps)(WeatherList);
