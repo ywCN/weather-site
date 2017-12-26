@@ -108,7 +108,6 @@
   - `payload`: describe or clarifies the conditions of the action that is being triggered.
 
 ## What happens after user clicks a button in Redux context
-- Loop
   1. user triggers an event, for example, click a button
   2. event listener will call an `action creator`
   3. `action creator` is a function that returns an object called `action`
