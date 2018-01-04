@@ -1,4 +1,4 @@
-# Visit [Weather Info Site](https://weather-site-yw.herokuapp.com)
+# Visit [Weather Info](https://weather-site-yw.herokuapp.com)
 
 ## Description:
 A mini weather query service that can search and display weather forecasts and local map.
