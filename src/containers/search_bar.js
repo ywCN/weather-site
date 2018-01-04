@@ -18,26 +18,28 @@ class SearchBar extends Component {
     }
 
     onFormSubmit(event) {
-        event.preventDefault();// tells browser no to submit form; to avoid refreshing page
+        event.preventDefault(); // tells browser no to submit form; to avoid refreshing page
         this.props.fetchWeather(this.state.term); //search the term by invoking action creator
         this.setState({ term: '' }); //reset term after search
     }
 
     render() {
         return (
-            <form 
+            <form
                 className="input-group"
                 onSubmit={event => this.onFormSubmit(event)}
             >
-                <input 
-                    placeholder="Get a 5 day forcast in your favorite city"
+                <input
+                    placeholder="Please enter a valid city name to get a 5 day forcast"
                     className="form-control"
                     value={this.state.term}
                     onChange={event => this.onInputChange(event)}
                 />
                 <span className="input-group-btn">
-                {/* span is used to wrap a button */}
-                    <button type="submit" className="btn btn-secondary">Submit</button>
+                    {/* span is used to wrap a button */}
+                    <button type="submit" className="btn btn-secondary">
+                        Submit
+                    </button>
                 </span>
             </form>
         );
