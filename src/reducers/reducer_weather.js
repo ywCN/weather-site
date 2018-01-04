@@ -6,6 +6,7 @@ export default function(state = [], action) {
         case FETCH_WEATHER:
             console.log('Request is:', action.payload.data);
             if (!action.payload.data) {
+                // if undefined
                 return state;
             }
             // action.payload.data is from the Object structure
